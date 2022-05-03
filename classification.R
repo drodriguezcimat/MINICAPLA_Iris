@@ -20,15 +20,15 @@ test     <- Xproy[-indexes,]
 
 #GIT - EDITAR METODO DE CLASIFICACION ###################################
 # Use KNN ##################
-prediction_training <- knn(training[,1:2],training[,1:2],cl=training$Species,k=PAR)
-prediction_test     <- knn(training[,1:2],test[,1:2],cl=training$Species,k=PAR)
+#prediction_training <- knn(training[,1:2],training[,1:2],cl=training$Species,k=PAR)
+#prediction_test     <- knn(training[,1:2],test[,1:2],cl=training$Species,k=PAR)
 
 # Use Random Forest ########
-#classifier = randomForest(Species ~ ., data=training, ntree=PAR, mtry=2, importance=TRUE)
+classifier = randomForest(Species ~ ., data=training, ntree=PAR, mtry=2, importance=TRUE)
 
 # Predict classes for training and test sets
-#prediction_test      <- predict(classifier,test[,1:2])
-#prediction_training  <- predict(classifier,training[,1:2])
+prediction_test      <- predict(classifier,test[,1:2])
+prediction_training  <- predict(classifier,training[,1:2])
 
 #########################################################################
 
