@@ -6,7 +6,6 @@
 #
 #    http://shiny.rstudio.com/
 #
-
 library(shiny)
 
 # Define UI for application that draws a histogram
@@ -28,11 +27,11 @@ ui <- fluidPage(
                         value = 10),
             
             #GIT - AGREGAR SLIDER PARA PROPORCION DE DATOS DE ENTRENAMIENTO ###
-            #sliderInput("prop",
-            #            "% de entrenamiento:",
-            #            min = 50,
-            #            max = 90,
-            #            value = 80),
+            sliderInput("prop",
+                        "% de entrenamiento:",
+                        min = 50,
+                        max = 90,
+                        value = 80),
             ##################################################################
             
             #GIT - EDITAR TITULO DEL BOTON ###################################
@@ -66,9 +65,8 @@ server <- function(input, output) {
         
         PAR    <<- input$bins
         
-        PTRAIN <<- 0.8
         #GIT - OBTENER VALOR DEL SLIDER DE PROPORCION DE ENTRENAMIENTO ####
-        #PTRAIN <<- 0.01*input$prop
+        PTRAIN <<- 0.01*input$prop
         ###################################################################
         
         #Principal component analysis
