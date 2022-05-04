@@ -3,9 +3,9 @@
 ###################################
 
 #GIT - EDITAR COLORES DE LA GRÁFICA ###############
-COL_CLASS1  <- "magenta"
-COL_CLASS2  <- "red"
-COL_CLASS3  <- "blue"
+COL_CLASS1  <- "orange"
+COL_CLASS2  <- "green"
+COL_CLASS3  <- "gray"
 ###################################################
 
 library(ggplot2)
