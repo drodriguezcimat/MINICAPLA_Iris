@@ -14,7 +14,7 @@ ui <- fluidPage(
     # Application title
   
     #GIT - EDITAR TITULO DE LA APLICACION ###################################
-    titlePanel("Iris Database: Classification with Random Forest ( versión 2.1)"),
+    titlePanel("Iris Database: Classification with Random Forest (versión 2.2)"),
     #########################################################################
 
     # Sidebar with a slider input for number of bins 
